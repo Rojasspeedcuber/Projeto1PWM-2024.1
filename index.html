@@ -3,58 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfólio</title>
 </head>
 <body>
     <header>
             <h1><strong>Portfólio de Henrique Rojas</strong></h1>
             <h1><strong>Dashboards<br>Power BI</strong></h1>
-            <img src="Imagens\BIimg.jpg" alt="" width="500"height="500">
+            <h1>
+                <table border="1">
+                    <caption>Guias</caption>
+                    <tr><td><a href="sobreoProjeto.html" target="iframe">Sobre o Projeto</a></td><td><a href="sobreMim.html" target="iframe">Sobre Mim</a></td><td><a href="dashboards.html" target="iframe">Dashboards</a></td><td><a href="contato.html" target="iframe">Contato</a></td></tr>
+                </table>
+            </h1>
+            <iframe id="iframeD" src="sobreoProjeto.html" name="iframe" frameborder="0"></iframe>
+            <script>
+                window.addEventListener('DOMContentLoaded', () => {
+                    const iframe = document.getElementById('iframeD');
+                    function resizeIframe() {
+                        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+                    }
+                    iframe.onload = resizeIframe;
+                });
+            </script>
     </header>
-    <main>
-        Este portifólio contém quatro dashboards que aprendi a desenvolver assistindo aulas no youtube.<br>São eles:
-        <ol>
-            <li>Dashboard de Compras</li>           
-            <li>Dashboard de Produção</li>
-            <li>Dashboard de Fluxo de Caixa</li>
-            <li>Dashboard de Vendas</li>
-        </ol>
-        Abaixo você pode conferi-los de forma 100% interativa
-        <ol>
-            <section>
-                <h2>
-                    <li>Dashboard de Compras</li>
-                </h2>
-                <aside>
-                    <table border="1">
-                        <caption>Custo Total por ano</caption>
-                        <tr><th></th><th>2019</th><th>2020</th><th>2021</th><th>2022</th><th>Total</th></tr>
-                        <tr><td>Custo Total</td><td>R$ 18190971,00</td><td>R$ 23739318,00</td><td>R$ 23843847,00</td><td>R$ 8528,00</td><td>R$ 65882665,00</td></tr>
-                    </table>
-                </aside>
-                <iframe title="Dashboard Compras" width="800" height="800" src="https://app.powerbi.com/view?r=eyJrIjoiMzBiMjcwZjEtNjkwZi00ZjAyLTk2MzctYTE4MTJiN2YzYTRhIiwidCI6IjAwN2U5MDIzLTU2ODEtNDI2NS1iN2Y4LTI3ZjVlMjY1YWYzOCJ9" frameborder="0" allowfullscreen="False"></iframe>
-            </section>
-            <section>
-                <h2>
-                    <li>Dashboard de Produção</li>
-                </h2>
-                <iframe title="Dashboard Produção" width="800" height="800" src="https://app.powerbi.com/view?r=eyJrIjoiNGZmZmFlYWMtM2RjNy00MjFiLTljYWMtY2ZmMWM3YWY0YjU3IiwidCI6IjAwN2U5MDIzLTU2ODEtNDI2NS1iN2Y4LTI3ZjVlMjY1YWYzOCJ9" frameborder="0" allowFullScreen="true"></iframe>
-            </section>
-            <section>
-                <h2>
-                    <li>Dashboard de Fluxo de Caixa</li>
-                </h2>
-                <iframe title="Dashboard Fluxo de Caixa" width="800" height="800" src="https://app.powerbi.com/view?r=eyJrIjoiNzUwZTE3ZWEtYzUxMC00NTVlLWI4NTctYWFjOTE3MzEwODczIiwidCI6IjAwN2U5MDIzLTU2ODEtNDI2NS1iN2Y4LTI3ZjVlMjY1YWYzOCJ9" frameborder="0" allowFullScreen="true"></iframe>
-            </section>
-            <section>
-                <h2>
-                    <li>Dashboard de Vendas</li>
-                </h2>
-                <iframe title="Dashboard Vendas" width="800" height="800" src="https://app.powerbi.com/view?r=eyJrIjoiNGQ4NWI2ODQtMjFiYi00Y2YxLTgwMzQtNmY3ODQyYzg2YjdkIiwidCI6IjAwN2U5MDIzLTU2ODEtNDI2NS1iN2Y4LTI3ZjVlMjY1YWYzOCJ9" frameborder="0" allowFullScreen="true"></iframe>
-            </section>
-        </ol>
-        
-    </main>
+    
     
 </body>
 </html>
