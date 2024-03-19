@@ -12,19 +12,22 @@
             <h1>
                 <table border="1">
                     <caption>Guias</caption>
-                    <tr><td><a href="sobreoProjeto.html" target="iframe">Sobre o Projeto</a></td><td><a href="sobreMim.html" target="iframe">Sobre Mim</a></td><td><a href="dashboards.html" target="iframe">Dashboards</a></td><td><a href="contato.html" target="iframe">Contato</a></td></tr>
+                    <tr><td><a href="sobreoProjeto.html" target="iframeD">Sobre o Projeto</a></td><td><a href="sobreMim.html" target="iframeD">Sobre Mim</a></td><td><a href="dashboards.html" target="iframeD">Dashboards</a></td><td><a href="contato.html" target="iframeD">Contato</a></td></tr>
                 </table>
             </h1>
-            <iframe id="iframeD" src="sobreoProjeto.html" name="iframe" frameborder="0"></iframe>
-            <script>
-                window.addEventListener('DOMContentLoaded', () => {
-                    const iframe = document.getElementById('iframeD');
-                    function resizeIframe() {
-                        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-                    }
-                    iframe.onload = resizeIframe;
-                });
-            </script>
+            <script language="JavaScript">
+                function iFrameHeight() {
+                if(document.getElementsByName && !(document.all)) {
+                h = document.getElementsByName('iframeD').contentDocument.body.scrollHeight;
+                document.getElementsByName('iframeD').style.height = h;
+                }
+                else if(document.all) {
+                h = document.frames('iframeD').document.body.scrollHeight;
+                document.all.iframeD.style.height = h;
+                }
+                }
+                </script>
+            <iframe name="iframeD"  onload="iFrameHeight();" src="sobreoProjeto.html" frameborder="0"></iframe>
     </header>
     
     
